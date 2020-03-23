@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nn-he-TVI">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="faI-mU-xwf">
+            <objects>
+                <viewController id="7Nn-he-TVI" customClass="ViewController" customModule="iOExChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1m-VK-a0x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SqQ-eh-pXm">
+                                <rect key="frame" x="60" y="607" width="278" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-yx-1c7">
+                                        <rect key="frame" x="0.0" y="19" width="20" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Ja3-QD-cN2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="message.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL0-sf-gao">
+                                        <rect key="frame" x="109" y="19" width="40" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="pmZ-Se-Ej1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="chart.bar.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQD-Gh-hJq">
+                                        <rect key="frame" x="238" y="19" width="40" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fCf-Dk-o6R"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="folder" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="FLy-9G-INC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bHc-2o-g1K"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5yi-Oj-zzQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r1E-Yj-zVA">
+                                    <size key="itemSize" width="213" height="121"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChatCell" id="shG-LU-aHR">
+                                        <rect key="frame" x="81" y="0.0" width="213" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fP9-XO-yuJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="213" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Nn-he-TVI" id="VQb-Ub-TBc"/>
+                                    <outlet property="delegate" destination="7Nn-he-TVI" id="p9f-2K-zAN"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hcT-tx-O4u" userLabel="InserBar">
+                                <rect key="frame" x="0.0" y="544" width="375" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Input Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8CD-L0-rGV">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GnS-vO-xMv"/>
+                                            <constraint firstAttribute="width" constant="290" id="hCv-eb-QbN"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnN-qG-7IN">
+                                        <rect key="frame" x="315" y="0.0" width="60" height="50"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="FJs-bR-h6X"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonInputSend:" destination="7Nn-he-TVI" eventType="touchUpInside" id="dOh-7M-HAz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SqQ-eh-pXm" firstAttribute="leading" secondItem="Hsc-tp-zPa" secondAttribute="leading" constant="60" id="0Mu-T7-UZI"/>
+                            <constraint firstItem="5yi-Oj-zzQ" firstAttribute="leading" secondItem="Hsc-tp-zPa" secondAttribute="leading" id="3X1-7R-aBE"/>
+                            <constraint firstItem="5yi-Oj-zzQ" firstAttribute="top" secondItem="Hsc-tp-zPa" secondAttribute="top" id="8Sh-yn-X30"/>
+                            <constraint firstAttribute="bottom" secondItem="SqQ-eh-pXm" secondAttribute="bottom" id="BHu-Gv-SCK"/>
+                            <constraint firstItem="Hsc-tp-zPa" firstAttribute="trailing" secondItem="hcT-tx-O4u" secondAttribute="trailing" id="Swf-uw-s3L"/>
+                            <constraint firstItem="hcT-tx-O4u" firstAttribute="top" secondItem="Hsc-tp-zPa" secondAttribute="top" constant="544" id="V7y-lA-Uta"/>
+                            <constraint firstItem="Hsc-tp-zPa" firstAttribute="bottom" secondItem="5yi-Oj-zzQ" secondAttribute="bottom" constant="99" id="VmY-l7-5wg"/>
+                            <constraint firstItem="5yi-Oj-zzQ" firstAttribute="trailing" secondItem="Hsc-tp-zPa" secondAttribute="trailing" id="eHT-kU-RTJ"/>
+                            <constraint firstItem="hcT-tx-O4u" firstAttribute="leading" secondItem="5yi-Oj-zzQ" secondAttribute="leading" id="py4-WA-1EG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hsc-tp-zPa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cm1-4p-feP"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5yi-Oj-zzQ" id="vD3-rM-zU7"/>
+                        <outlet property="sendBt" destination="SnN-qG-7IN" id="CuW-c3-VQT"/>
+                        <outlet property="textInput" destination="8CD-L0-rGV" id="cN8-EC-pEM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1K-Ui-Cor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="188.45577211394306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.fill" catalog="system" width="64" height="44"/>
+        <image name="folder" catalog="system" width="64" height="46"/>
+        <image name="message.fill" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
